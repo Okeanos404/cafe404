@@ -130,17 +130,14 @@ copy .env.example .env
 php artisan key:generate
 ```
 
-## ⚙️ Setup Database (Laragon + phpMyAdmin)
+## 🗄️ Setup Database (Laragon + phpMyAdmin)
 
 ### 5) Buat Database
 
-Buka http://localhost/phpmyadmin
-
-Klik New
-
-Buat database dengan nama: cafe404_db
-
-Collation: utf8mb4_unicode_ci
+1. Buka `http://localhost/phpmyadmin`
+2. Klik **New**
+3. Buat database dengan nama: `cafe404_db`
+4. Collation: `utf8mb4_unicode_ci
 
 ### 6) Setting .env
 ```bash
@@ -168,6 +165,10 @@ kategori (coffee / non-coffee / snack)
 produk awal
 
 ▶️ Menjalankan Project
+
+```md
+> Catatan: Database tidak diupload dalam bentuk `.sql`.
+> Struktur tabel dibuat dari migration dan data awal dibuat dari seeder.
 
 ### 8) Jalankan Backend Laravel
 ```bash
