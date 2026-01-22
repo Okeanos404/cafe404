@@ -166,7 +166,6 @@ produk awal
 
 ▶️ Menjalankan Project
 
-```md
 > Catatan: Database tidak diupload dalam bentuk `.sql`.
 > Struktur tabel dibuat dari migration dan data awal dibuat dari seeder.
 
