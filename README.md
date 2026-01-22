@@ -1,59 +1,233 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ☕ CAFE 404
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-Framework-red?logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-8.x-blue?logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange?logo=mysql&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-UI-38B2AC?logo=tailwindcss&logoColor=white)
+![ChartJS](https://img.shields.io/badge/Chart.js-Report-green?logo=chartdotjs&logoColor=white)
 
-## About Laravel
+Aplikasi Coffee Shop berbasis **Laravel** dengan 2 role utama:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- ✅ **Admin** (Dashboard admin + kelola produk + kelola pesanan + laporan)
+- ✅ **Customer** (Dashboard customer + menu + keranjang + checkout + riwayat pesanan)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📸 Preview UI
 
-## Learning Laravel
+### 🔐 Login Page
+![Login UI](public/screenshots/login.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 🛠️ Admin Dashboard
+![Admin Dashboard](public/screenshots/admin-dashboard.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 👤 Customer Dashboard
+![Customer Dashboard](public/screenshots/customer-dashboard.png)
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🚀 Fitur Utama
 
-### Premium Partners
+### ✅ Customer
+- Login & Register (UI custom CAFE 404)
+- Lihat menu produk (Coffee / Non-Coffee / Snack)
+- Search & filter kategori
+- Tambah produk ke keranjang (Session Cart)
+- Checkout + pilih metode pembayaran
+- Riwayat pesanan + detail pesanan
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### ✅ Admin
+- Dashboard admin
+- CRUD Produk (Tambah / Edit / Hapus)
+- Kelola pesanan customer
+- Update status pesanan: `pending`, `paid`, `cancelled`
+- Laporan penjualan + filter tanggal + chart sederhana
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 💳 Metode Pembayaran (Simulasi)
 
-## Code of Conduct
+Saat checkout, customer dapat memilih metode pembayaran:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Bank Transfer: **BCA, Mandiri, BRI, BNI**
+- Dompet Digital: **DANA, GO-PAY, ShopeePay**
+- QR Code: **QRIS**
 
-## Security Vulnerabilities
+> Pembayaran masih simulasi (belum payment gateway).  
+> Order disimpan dengan status default `pending`.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 🔑 Akun Admin (Seeder)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Admin otomatis dibuat melalui seeder.
+
+✅ **Admin Login**
+- Email: `admin@cafe404.com`
+- Password: `admin404`
+
+---
+
+## 🛠️ Teknologi
+- Laravel
+- MySQL (Laragon + phpMyAdmin)
+- TailwindCSS (CDN)
+- Font Awesome Icons
+- Chart.js (laporan admin)
+
+---
+
+## 🗄️ Database
+
+Project ini menggunakan **MySQL**.
+
+✅ Nama database yang digunakan:
+- `cafe404_db`
+
+✅ Tabel utama:
+- `users`
+- `categories`
+- `products`
+- `orders`
+- `order_items`
+- `sessions`
+
+Database dibuat otomatis menggunakan **migration**, dan data awal dibuat oleh **seeder**.
+
+---
+
+## ⚙️ Cara Install & Jalankan Project (Local)
+
+### 1) Clone Repository
+```bash
+git clone https://github.com/USERNAME/REPO_NAME.git
+cd REPO_NAME
+```
+
+### 2) Install Dependencies
+```bash
+composer install
+npm install
+```
+
+### 3) Copy ENV
+```bash
+Linux/Mac:
+
+cp .env.example .env
+
+
+Windows:
+
+copy .env.example .env
+```
+
+### 4) Generate APP KEY
+```bash
+php artisan key:generate
+```
+
+## ⚙️ Setup Database (Laragon + phpMyAdmin)
+
+### 5) Buat Database
+
+Buka http://localhost/phpmyadmin
+
+Klik New
+
+Buat database dengan nama: cafe404_db
+
+Collation: utf8mb4_unicode_ci
+
+### 6) Setting .env
+```bash
+Buka file .env, lalu sesuaikan:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=cafe404_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 7) Migrate + Seed
+```bash
+php artisan migrate:fresh --seed
+```
+
+Seeder akan mengisi:
+
+akun admin
+
+kategori (coffee / non-coffee / snack)
+
+produk awal
+
+▶️ Menjalankan Project
+
+### 8) Jalankan Backend Laravel
+```bash
+php artisan serve
+```
+
+Akses:
+
+http://127.0.0.1:8000
+
+### 9) Jalankan Frontend (Vite)
+```bash
+
+Mode development:
+
+npm run dev
+
+
+Build production:
+
+npm run build
+```
+
+### 🌐 URL Penting
+
+✅ Login: http://127.0.0.1:8000/login
+
+✅ Register: http://127.0.0.1:8000/register
+
+✅ Customer Dashboard: http://127.0.0.1:8000/customer/dashboard
+
+✅ Admin Dashboard: http://127.0.0.1:8000/admin/dashboard
+
+✅ Menu Customer: http://127.0.0.1:8000/menu
+
+✅ Keranjang: http://127.0.0.1:8000/cart
+
+✅ Checkout: http://127.0.0.1:8000/checkout
+
+✅ Admin Orders: http://127.0.0.1:8000/admin/orders
+
+✅ Admin Reports: http://127.0.0.1:8000/admin/reports
+
+### 📌 Catatan Penting
+
+Folder vendor/ dan node_modules/ tidak diupload ke GitHub (best practice).
+
+File .env tidak diupload karena berisi konfigurasi sensitif.
+
+Produk belum menggunakan gambar (sementara).
+
+### 🧰 Troubleshooting
+Error: Table 'sessions' doesn't exist
+```bash
+php artisan session:table
+php artisan migrate
+```
+
+Error: Duplicate entry admin@cafe404.com
+```bash
+php artisan migrate:fresh --seed
+```
+
+### 📄 License
+
+Project ini dibuat untuk pembelajaran & portofolio.
