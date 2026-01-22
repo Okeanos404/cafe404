@@ -6,7 +6,8 @@
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-UI-38B2AC?logo=tailwindcss&logoColor=white)
 ![ChartJS](https://img.shields.io/badge/Chart.js-Report-green?logo=chartdotjs&logoColor=white)
 
-Aplikasi Coffee Shop berbasis **Laravel** dengan 2 role utama:
+Aplikasi Coffee Shop berbasis **Laravel** (PHP Framework) dengan database **MySQL**  
+dan memiliki 2 role utama:
 
 - ✅ **Admin** (Dashboard admin + kelola produk + kelola pesanan + laporan)
 - ✅ **Customer** (Dashboard customer + menu + keranjang + checkout + riwayat pesanan)
@@ -69,11 +70,13 @@ Admin otomatis dibuat melalui seeder.
 ---
 
 ## 🛠️ Teknologi
-- Laravel
-- MySQL (Laragon + phpMyAdmin)
+- **Laravel** (PHP Framework)
+- **PHP 8.x**
+- **MySQL** (Laragon + phpMyAdmin)
 - TailwindCSS (CDN)
 - Font Awesome Icons
 - Chart.js (laporan admin)
+
 
 ---
 
@@ -176,15 +179,15 @@ Akses:
 http://127.0.0.1:8000
 
 ### 9) Jalankan Frontend (Vite)
-```bash
+
 
 Mode development:
-
+```bash
 npm run dev
-
+```
 
 Build production:
-
+```bash
 npm run build
 ```
 
